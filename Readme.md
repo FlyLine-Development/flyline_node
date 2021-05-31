@@ -1,4 +1,4 @@
-Flyline-node  [![npm version](https://badge.fury.io/js/plaid.svg)](http://badge.fury.io/js/plaid)
+Flyline-node  
 ==============
 
 A node.js client library for the [Flyline API][1].
@@ -47,7 +47,7 @@ const flyline = require('flyline');
 
 
 // Initialize client
-const flylineClient = new plaid.Client();
+const flylineClient = new Flyline.Client();
 
 // getSeatList(String, Function)
 flylineClient.getSeatList(f_token, cb);
@@ -106,7 +106,7 @@ All requests have callbacks of the following form:
 
 ```javascript
 function callback(err, response) {
-  // err can be a network error or a Plaid API error (i.e. invalid credentials)
+  // err can be a network error or a Flyline API error (i.e. invalid credentials)
 }
 ```
 
