@@ -45,6 +45,7 @@ Once an instance of the client has been created you use the following methods:
 ```javascript
 const flyline = require('flyline');
 
+
 // Initialize client
 const flylineClient = new plaid.Client();
 
@@ -96,9 +97,7 @@ flylineClient.getAirfareWithParams(f_token, paramObj, cb);
 flylineClient.GetAirScheduleWithParam(f_token, paramObj, cb);
 // GetAirScheduleByRoute(String, JSONObject, Function)
 flylineClient.GetAirScheduleByRoute(f_token, paramObj, cb);
-
-
-
+```
 **All parameters are required.**
 
 ## Callbacks
