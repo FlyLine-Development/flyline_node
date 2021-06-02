@@ -1,6 +1,6 @@
 {
-  "name": "@flylinedev/flyline_node",
-  "version": "1.0.2",
+  "name": "@flylinedev/flyline_sdk",
+  "version": "1.0.0",
   "description": "Flyline Node SDK",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FlyLine-Development/flyline-node/issues"
+    "url": "https://github.com/FlyLine-Development/flyline_node/issues"
   },
-  "homepage": "https://github.com/FlyLine-Development/flyline-node#readme"
+  "homepage": "https://github.com/FlyLine-Development/flyline_node#readme"
 }
