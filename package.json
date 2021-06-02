@@ -1,5 +1,5 @@
 {
-  "name": "@FlyLine-Development/flyline-sdk",
+  "name": "@FlyLine-Development/flyline-node",
   "version": "1.0.2",
   "description": "Flyline Node SDK",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlyLine-Development/flyline-sdk.git"
+    "url": "git+https://github.com/FlyLine-Development/flyline-node.git"
   },
   "keywords": [
     "flyline",
