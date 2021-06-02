@@ -1,6 +1,6 @@
 {
-  "name": "flyline",
-  "version": "1.0.0",
+  "name": "flyline-sdk",
+  "version": "1.0.1",
   "description": "Flyline Node SDK",
   "main": "index.js",
   "scripts": {
