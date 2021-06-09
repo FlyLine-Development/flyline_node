@@ -102,7 +102,7 @@ flylineClient.get_airfares(data);
 
 ## Error Handling
 
-`paramObj` should be the JsonObject, referenced in the function of [Flyline API ][2].
+`data` should be the String of JsonObject, referenced in the function of [Flyline API ][2].
 Callback function will response the `error` as response message if there is no required param.
 
 ## Examples
