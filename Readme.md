@@ -29,11 +29,11 @@ The module supports all Flyline API endpoints.  For complete information about t
 to the [docs][2].
 
 All endpoints require a valid `FToken` to
-access and are accessible from a valid instance of a Flyline `Client`:
+access and are accessible from a valid instance of a Flyline `Client` with initializing of FToken: test_***
 
 ```javascript
 const flyline = require('flyline');
-const flylineClient = new flyline.Client();
+const flylineClient = new flyline.Client("test_***");
 ```
 
 The default timeout for requests is 10 minutes.
@@ -46,57 +46,55 @@ Once an instance of the client has been created you use the following methods:
 const flyline = require('flyline');
 
 
-// Initialize client
-const flylineClient = new Flyline.Client();
+// Initialize client with FToken-test_***
+const flylineClient = new Flyline.Client("test_***");
 
-// getSeatList(String, Function)
-flylineClient.getSeatList(f_token, cb);
-// getLayoutList(String, Function)
-flylineClient.getLayoutList(f_token,cb);
-// getFoodList(String, Function)
-flylineClient.getFoodList(f_token, cb);
-// getBeverageList(String, Function)
-flylineClient.getBeverageList(f_token, cb);
-// getEntertainmentList(String, Function)
-flylineClient.getEntertainmentList(f_token, cb);
-// getWifiList(String, Function)
-flylineClient.getWifiList(f_token, cb);
-// getPowerList(String, Function)
-flylineClient.getPowerList(f_token, cb)
-// getAircraftList(String, Function)
-flylineClient.getAircraftList(f_token, cb);
-// getAirCraftByIataCode(String, String, Function)
-flylineClient.getAirCraftByIataCode(f_token, aircraftIataCode, cb);
-// getAirlineList(String, Function)
-flylineClient.getAirlineList(f_token, cb);
-// getAirlineByIataCode(String, String, Function)
-flylineClient.getAirlineByIataCode(f_token, airlineIataCode, cb);
-// getAirportList(String, Function)
-flylineClient.getAirportList(f_token, cb);
-// getAirportByIataCode(String, String, Function)
-flylineClient.getAirportByIataCode(f_token, airportIataCode, cb);
-// getAirportByCity(String, String, Function)
-flylineClient.getAirportByCity(f_token, airportCity, cb);
-// getCityList(String, Function)
-flylineClient.getCityList(f_token, cb);
-// getCityByIataCode(String, String, Function)
-flylineClient.getCityByIataCode(f_token, cityIataCode, cb);
-// getCabinMapping(String, Function)
-flylineClient.getCabinMapping(f_token, cb);
-// getCabinMapingWithParams(String, JSONObject?, Function)
-flylineClient.getCabinMapingWithParams(f_token, paramObj, cb);
-// getSeatMap(String, JSONObject, Function)
-flylineClient.getSeatMap(f_token, paramObj, cb);
-// getAirAttributeWithParams(String, JSONObject, Function)
-flylineClient.getAirAttributeWithParams(f_token, paramObj, cb);
-// getAirAttributeByRoute(String, JSONObject, Function)
-flylineClient.getAirAttributeByRoute(f_token, paramObj, cb);
-// getAirfareWithParams(String, JSONObject, Function)
-flylineClient.getAirfareWithParams(f_token, paramObj, cb);
-// GetAirScheduleWithParam(String, JSONObject, Function)
-flylineClient.GetAirScheduleWithParam(f_token, paramObj, cb);
-// GetAirScheduleByRoute(String, JSONObject, Function)
-flylineClient.GetAirScheduleByRoute(f_token, paramObj, cb);
+// getSeatList()
+flylineClient.get_seat_types();
+// getLayoutList()
+flylineClient.get_seat_layouts();
+// getFoodList()
+flylineClient.get_foods();
+// getBeverageList()
+flylineClient.get_beverages();
+// getEntertainmentList()
+flylineClient.get_entertainments();
+// getWifiList()
+flylineClient.get_wifis();
+// getPowerList()
+flylineClient.get_powers()
+// getAircraftList()
+flylineClient.get_aircrafts();
+// getAirCraftByIataCode()
+flylineClient.get_aircraft(iata_code);
+// getAirlineList()
+flylineClient.get_airlines();
+// getAirlineByIataCode()
+flylineClient.get_airline(iata_code);
+// getAirportList()
+flylineClient.get_airports();
+// getAirportByIataCode()
+flylineClient.get_airport(iata_code);
+// getAirportByCity()
+flylineClient.get_airports_by_city(iata_code);
+// getCityList()
+flylineClient.get_cities();
+// getCityByIataCode()
+flylineClient.get_city(iata_code);
+// getCabinMapping()
+flylineClient.get_cabin_class_mapping(carrier = optional, cabin_class = optional);
+// getSeatMap("{"carrier": "AA","aircraft": "738"}")
+flylineClient.get_seat_map(data);
+// getSchedulesByFlightNumber("{"airline": "AA","date": "2021-06-06","flight_number": "1105"}")
+flylineClient.get_schedules_by_flight_number(data);
+// getSchdulesByRoute("{"origin": "JFK","destination": "DFW","airline": "AA","date": "2021-06-06"}")
+flylineClient.get_schedules_by_route(data);
+// getAirAttributesByFlightNumber("{"cabin_class": "economy","departure": "DFW","arrival": "LAX","departure_date": "2021-06-15","flight_no": "2812","carrier": "AA"}")
+flylineClient.get_airattributes_by_flight_number(data);
+// getAirAttributeByRoute("{"cabin_class": "economy","slices": [{"departure": {"code": "DFW","date": "2021-06-15"},"arrival": {"code": "LAX"}}],"passengers": 1}")
+flylineClient.get_airattributes_by_route(data);
+// getAirfares("{"cabin_class": "economy","slices": [{"departure": {"code": "DFW","date": "2021-06-15"},"arrival": {"code": "LAX"}}],"passengers": 1}")
+flylineClient.get_airfares(data);
 ```
 **All parameters are required.**
 
