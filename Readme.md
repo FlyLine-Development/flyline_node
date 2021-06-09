@@ -98,15 +98,7 @@ flylineClient.get_airfares(data);
 ```
 **All parameters are required.**
 
-## Callbacks
 
-All requests have callbacks of the following form:
-
-```javascript
-function callback(err, response) {
-  // err can be a network error or a Flyline API error (i.e. invalid credentials)
-}
-```
 
 ## Error Handling
 
@@ -121,23 +113,10 @@ You can `Live Token` and `Sandbox Token` in [Flyline Account Page][3]
 
 Here is Get Seat List API as a Example.
 ```javascript
-flylineClient.getSeatList(f_token, (err, seats) => {
-  seats.map(seat => {console.log(This ${seat} is available now)});
-});
+var aircrafts = await new flyline.Client("test_***").get_aircrafts();
 ```
 
-## Promise Support
-Every method returns a promise, so you don't have to use the callbacks.
-API methods that return either a success or an error can be used with the
-usual `then/else` paradigm, e.g.
 
-```javascript
-flylinePromise.then(successResponse => {
-  // ...
-}).catch(err => {
-  // ...
-});
-```
 ## Support
 Open an [issue][4]!
 
