@@ -6,7 +6,7 @@ class FlyClient {
         this.f_token = f_token
     }
 
-    async get_airfares(data) {
+    async getAirfares(data) {
         json_data = JSON.stringify(data);
 
         var config = {
@@ -23,7 +23,7 @@ class FlyClient {
         return response
     }
 
-    async get_airattributes_by_flight_numbers(data) {
+    async getAirAttributesByFlightNumbers(data) {
         json_data = JSON.stringify(data);
         var config = {
             method: 'post',
@@ -39,7 +39,7 @@ class FlyClient {
         return response
     }
 
-    async get_airattirbutes_by_route(data) {
+    async getAirAttirbutesByRoute(data) {
         json_data = JSON.stringify(data);
         var config = {
             method: 'post',
@@ -55,7 +55,7 @@ class FlyClient {
         return response
     }
 
-    async get_schedules_by_flight_number(data) {
+    async getSchedulesByFlightNumber(data) {
 
         var json_data = JSON.stringify(data);
 
@@ -73,7 +73,7 @@ class FlyClient {
         return response
     }
 
-    async get_schedules_by_route(data) {
+    async getSchedulesByRoute(data) {
 
         var json_data = JSON.stringify(data);
 
@@ -91,7 +91,7 @@ class FlyClient {
         return response
     }
 
-    async get_seat_map(data){
+    async getSeatMap(data){
         
         var json_data = JSON.stringify(data);
 
@@ -109,7 +109,7 @@ class FlyClient {
         return response
     }
 
-    async get_aircrafts(){
+    async getAircrafts(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/aircraft/`,
@@ -123,7 +123,7 @@ class FlyClient {
         return response
     }
 
-    async get_aircraft(iata_code){
+    async getAircraft(iata_code){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/aircraft/${iata_code}/`,
@@ -137,7 +137,7 @@ class FlyClient {
         return response
     }
 
-    async get_airlines(){
+    async getAirlines(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/airlines/`,
@@ -151,7 +151,7 @@ class FlyClient {
         return response
     }
 
-    async get_airline(iata_code){
+    async getAirline(iata_code){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/airlines/${iata_code}/`,
@@ -165,7 +165,7 @@ class FlyClient {
         return response
     }
 
-    async get_airports(){
+    async getAirports(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/airports/`,
@@ -179,7 +179,7 @@ class FlyClient {
         return response
     }
 
-    async get_airport(iata_code){
+    async getAirport(iata_code){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/airports/${iata_code}`,
@@ -193,7 +193,7 @@ class FlyClient {
         return response
     }
 
-    async get_airports_by_city(iata_code){
+    async getAirportsByCity(iata_code){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/cities/${iata_code}/airports`,
@@ -207,7 +207,7 @@ class FlyClient {
         return response
     }
 
-    async get_cities(){
+    async getCities(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/cities/`,
@@ -221,7 +221,7 @@ class FlyClient {
         return response
     }
 
-    async get_city(iata_code){
+    async getCity(iata_code){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/cities/${iata_code}`,
@@ -234,7 +234,7 @@ class FlyClient {
         const response = await axios(config);
         return response
     }
-    async get_cabin_class_mapping(carrier = null, cabin_class = null){
+    async getCabinClassMapping(carrier = null, cabin_class = null){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/cabin-booking/?carrier=${carrier}&cabin_class=${cabin_class}`,
@@ -248,7 +248,7 @@ class FlyClient {
         return response
     }
 
-    async get_seat_types(){
+    async getSeatTypes(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/seats/`,
@@ -261,7 +261,7 @@ class FlyClient {
         const response = await axios(config)
         return response
     }
-    async get_seat_layouts(){
+    async getSeatLayouts(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/layouts/`,
@@ -275,7 +275,7 @@ class FlyClient {
         return response
     }
 
-    async get_foods(){
+    async getFoods(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/foods/`,
@@ -289,7 +289,7 @@ class FlyClient {
         return response
     }
 
-    async get_beverages(){
+    async getBeverages(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/beverages/`,
@@ -303,7 +303,7 @@ class FlyClient {
         return response
     }
 
-    async get_entertainments(){
+    async getEntertainments(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/entertainments/`,
@@ -317,7 +317,7 @@ class FlyClient {
         return response
     }
 
-    async get_wifis(){
+    async getWifis(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/wifis/`,
@@ -331,7 +331,7 @@ class FlyClient {
         return response
     }
 
-    async get_powers(){
+    async getPowers(){
         var config = {
             method: 'get',
             url: `${environments.BASE_URL}/api/powers/`,

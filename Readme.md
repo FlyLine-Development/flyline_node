@@ -50,51 +50,51 @@ const flyline = require('flyline');
 const flylineClient = new Flyline.Client("test_***");
 
 // getSeatList()
-flylineClient.get_seat_types();
+flylineClient.getSeatTypes();
 // getLayoutList()
-flylineClient.get_seat_layouts();
+flylineClient.getSeatLayouts();
 // getFoodList()
-flylineClient.get_foods();
+flylineClient.getFoods();
 // getBeverageList()
-flylineClient.get_beverages();
+flylineClient.getBeverages();
 // getEntertainmentList()
-flylineClient.get_entertainments();
+flylineClient.getEntertainments();
 // getWifiList()
-flylineClient.get_wifis();
+flylineClient.getWifis();
 // getPowerList()
-flylineClient.get_powers()
+flylineClient.getPowers()
 // getAircraftList()
-flylineClient.get_aircrafts();
+flylineClient.getAircrafts();
 // getAirCraftByIataCode()
-flylineClient.get_aircraft(iata_code);
+flylineClient.getAircraft(iata_code);
 // getAirlineList()
-flylineClient.get_airlines();
+flylineClient.getAirlines();
 // getAirlineByIataCode()
-flylineClient.get_airline(iata_code);
+flylineClient.getAirline(iata_code);
 // getAirportList()
-flylineClient.get_airports();
+flylineClient.getAirports();
 // getAirportByIataCode()
-flylineClient.get_airport(iata_code);
+flylineClient.getAirport(iata_code);
 // getAirportByCity()
-flylineClient.get_airports_by_city(iata_code);
+flylineClient.getAirportsByCity(iata_code);
 // getCityList()
-flylineClient.get_cities();
+flylineClient.getCities();
 // getCityByIataCode()
-flylineClient.get_city(iata_code);
+flylineClient.getCity(iata_code);
 // getCabinMapping()
-flylineClient.get_cabin_class_mapping(carrier = optional, cabin_class = optional);
+flylineClient.getCabinClassMapping(carrier = optional, cabin_class = optional);
 // getSeatMap("{"carrier": "AA","aircraft": "738"}")
-flylineClient.get_seat_map(data);
+flylineClient.getSeatMap(data);
 // getSchedulesByFlightNumber("{"airline": "AA","date": "2021-06-06","flight_number": "1105"}")
-flylineClient.get_schedules_by_flight_number(data);
+flylineClient.getSchedulesByFlightNumber(data);
 // getSchdulesByRoute("{"origin": "JFK","destination": "DFW","airline": "AA","date": "2021-06-06"}")
-flylineClient.get_schedules_by_route(data);
+flylineClient.getSchedulesByRoute(data);
 // getAirAttributesByFlightNumber("{"cabin_class": "economy","departure": "DFW","arrival": "LAX","departure_date": "2021-06-15","flight_no": "2812","carrier": "AA"}")
-flylineClient.get_airattributes_by_flight_number(data);
+flylineClient.getAirAttributesByFlightNumber(data);
 // getAirAttributeByRoute("{"cabin_class": "economy","slices": [{"departure": {"code": "DFW","date": "2021-06-15"},"arrival": {"code": "LAX"}}],"passengers": 1}")
-flylineClient.get_airattributes_by_route(data);
+flylineClient.getAirAttributesByRoute(data);
 // getAirfares("{"cabin_class": "economy","slices": [{"departure": {"code": "DFW","date": "2021-06-15"},"arrival": {"code": "LAX"}}],"passengers": 1}")
-flylineClient.get_airfares(data);
+flylineClient.getAirfares(data);
 ```
 **All parameters are required.**
 
