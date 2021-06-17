@@ -27,7 +27,7 @@ class FlyClient {
         json_data = JSON.stringify(data);
         var config = {
             method: 'post',
-            url: `${environments.BASE_URL}/api/search/amenities/`,
+            url: `${environments.BASE_URL}/search/attributes/flight/`,
             headers: {
                 'Authorization': `FToken ${this.f_token}`,
                 'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ class FlyClient {
         json_data = JSON.stringify(data);
         var config = {
             method: 'post',
-            url: `${environments.BASE_URL}/api/amenities/search/route/`,
+            url: `${environments.BASE_URL}/search/attributes/route/`,
             headers: {
                 'Authorization': `FToken ${this.f_token}`,
                 'Content-Type': 'application/json'
@@ -92,7 +92,7 @@ class FlyClient {
     }
 
     async getSeatMap(data){
-        
+
         var json_data = JSON.stringify(data);
 
         var config = {
